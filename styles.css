@@ -1,0 +1,96 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero header with background image */
+.hero-header {
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-image: url('E:/site/image/mert-genccinar-neoplatonic-mystic.jpg'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Vertically center all content */
+    align-items: flex-start; /* Align to the left */
+    padding: 5rem;
+
+.hero-title {
+    color: #fff;
+    font-size: 10rem; /* Make the title larger */
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    text-align: left; /* Align text to the left */
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Sections */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.logo {
+    width: 150px; /* تنظیم عرض لوگو */
+    height: auto; /* حفظ نسبت تصویر */
+    vertical-align: middle; /* تراز وسط با متن */
+    margin-right: 5px; /* فاصله بین لوگو و حرف r */
+}
+.caption {
+    font-size: 1.2rem;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    color: #fff;
+    text-align: left;
+    margin-top: 0; /* Add space between title and caption */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    width: 50%; /* Make caption full width */
