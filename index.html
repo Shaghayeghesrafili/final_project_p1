@@ -6,28 +6,190 @@
     <title>Arta</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- بخش هدر -->
     <header class="hero-header">
         <h1 class="hero-title">
             <img src="e:\site\image\Group1.png" alt="Logo" class="logo">rta
         </h1>
-        <p class="caption">a world from your crativity. .</p>
+        <p class="caption">a world from your creativity. .</p>
+            <div class="header-left">
+                <div class="search-wrapper">
+                    <button class="search-icon">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" placeholder="Search..." class="search-input">
+                </div>
+            </div>
+        </header>
     </header>
-    <nav>
-        <a href="#artworks">Art Works</a>
-        <a href="#courses">Courses</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="container">
-        <section class="section">
-            <h2>Welcome to Arta's Portfolio</h2>
-            <p>Discover artworks, courses, and blog posts here!</p>
-        </section>
-    </div>
-    <footer>
-        <p>&copy; 2025 Arta. All Rights Reserved.</p>
-    </footer>
+
+    <!-- بخش کتگوری‌ها -->
+    <section class="categories-wrapper">
+        <button id="left-arrow" class="arrow-button">&larr;</button>
+        <div class="categories-section">
+            <div class="category-box">
+                <h3>UI/UX</h3>
+            </div>
+            <div class="category-box">
+                <h3>3d modeling</h3>
+            </div>
+            <div class="category-box">
+                <h3>illustration</h3>
+            </div>
+            <div class="category-box">
+                <h3>Digital paiting</h3>
+            </div>
+            <div class="category-box">
+                    <h3>Architecture</h3>
+            </div>
+            <div class="category-box">
+                    <h3>Photography</h3>
+            </div>
+            <div class="category-box">
+                    <h3>Sketching</h3>
+            </div>
+            <div class="category-box">
+                    <h3>comic</h3>
+            </div>
+            <div class="category-box">
+                    <h3>Sketching</h3>  
+            </div>
+            <!-- می‌توانید باکس‌های بیشتری اضافه کنید -->
+        </div>
+        <button id="right-arrow" class="arrow-button">&rarr;</button>
+    </section>
+
+    <!-- لینک به اسکریپت -->
+    <script src="script.js"></script>
 </body>
+<section class="artworks-section">
+    <div class="section-header">
+        <h2 class="section-title">Artworks</h2>
+        <a href="#" class="section-more">More →</a>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item" style="background-image: url('path-to-image1.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image2.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image3.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image4.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image5.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image6.jpg');"></div>
+    </div>
+</section>
+<section class="artworks-section">
+    <div class="section-header">
+        <h2 class="section-title">Courses</h2>
+        <a href="#" class="section-more">More →</a>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item" style="background-image: url('path-to-image1.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image2.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image3.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image4.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image5.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image6.jpg');"></div>
+    </div>
+</section>
+<section class="artworks-section">
+    <div class="section-header">
+        <h2 class="section-title">Blog</h2>
+        <a href="#" class="section-more">More →</a>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item" style="background-image: url('path-to-image1.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image2.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image3.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image4.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image5.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('path-to-image6.jpg');"></div>
+    </div>
+</section>
+<footer>
+    <div class="footer-container">
+        
+        <div class="footer-left">
+            <div class="footer-column">
+                <h3>CATEGORIES</h3>
+                <p>Illustration</p>
+            <p>Craft</p>
+            <p>Photography & Video</p>
+            <p>Design</p>
+            <p>3D & Animation</p>
+            <p>Architecture & Spaces</p>
+            <p>Writing</p>
+            <p>Fashion</p>
+            <p>Web & App Design</p>
+            <p>Calligraphy & Typography</p>
+            <p>Music & Audio</p>
+            <p>Culinary</p>
+            <p>Artificial Intelligence</p>
+            <p>How to become</p>
+            </div>
+            <div class="footer-column">
+                <h3>SOFTWARES</h3>
+                <p>Adobe Photoshop</p>
+            <p>Adobe Illustrator</p>
+            <p>Procreate</p>
+            <p>Cinema 4D</p>
+            <p>Adobe Premiere</p>
+            <p>Blender</p>
+            <p>Zbrush</p>
+            <p>Figma</p>
+            </div>
+            <div class="footer-column">
+                <h3>LISTS</h3>
+                <p>Zbrush</p>
+                <p>Figma</p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-column">
+                <h3>SECTIONS</h3>
+                <p>Courses</p>
+                <p>Projects</p>
+                <p>Jobs</p>
+                <p>Creatives</p>
+                <p>Schools</p>
+            </div>
+            <div class="footer-column">
+                <h3>INFO</h3>
+                <p>ARTA</p>
+                <p>Contact</p>
+                <p>Blog</p>
+                <p>Affiliates</p>
+                <p>Businesses</p>
+                <p>Teachers</p>
+            </div>
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="image/Twitter.png" alt="Twitter">
+                    </a>
+                    <a href="https://pinterest.com" target="_blank">
+                        <img src="image/Pinterest.png" alt="Pinterest">
+                    </a>
+                    <a href="https://youtube.com" target="_blank">
+                        <img src="image/YouTube.png" alt="YouTube">
+                    </a>
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="" alt="Facebook">
+                    </a>
+                    <a href="https://linkedin.com" target="_blank">
+                        <img src="image/LinkedIn.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="image/Instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 </html>
