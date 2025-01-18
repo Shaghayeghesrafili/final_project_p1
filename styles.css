@@ -232,19 +232,120 @@ header {
 .gallery-item:hover {
     transform: scale(1.05); /* افکت بزرگنمایی هنگام هاور */
 }
+/* سبک‌دهی گالری بخش کورس *//* گالری بخش کورس */
+.courses-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.courses-gallery .gallery-item {
+    background-color: #ddd;
+    position: relative;
+    width: 100%;
+    height: 350px; /* ارتفاع بیشتر برای بخش کورس */
+    overflow: hidden; /* جلوگیری از برش شدن تصویر */
+    border-radius: 8px;
+}
+
+.courses-gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* یا contain برای فیت شدن دقیق تصویر */
+    border-radius: 8px;
+}
+
+.courses-gallery .gallery-item:hover {
+    transform: scale(1.05); /* افکت بزرگنمایی هنگام هاور */
+}
+
+
+/* گالری بخش بلاگ */
+.blogs-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.blogs-gallery .gallery-item {
+    background-color: #ddd;
+    position: relative;
+    width: 100%;
+    height: 350px; /* ارتفاع بیشتر برای بخش بلاگ */
+    overflow: hidden; /* جلوگیری از برش شدن تصویر */
+    border-radius: 8px;
+}
+
+.blogs-gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.blogs-gallery .gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* گالری بخش ارت‌ورک (بدون تغییر ارتفاع) */
+.artworks-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.artworks-gallery .gallery-item {
+    background-color: #ddd;
+    position: relative;
+    width: 100%;
+    height: 250px; /* ارتفاع پیش‌فرض برای بخش ارت‌ورک */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.artworks-gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.artworks-gallery .gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.courses-gallery .item-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.courses-gallery .user-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.courses-gallery .user-name {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
 /* فوتر */
 footer {
     background-color: #D9D9D9;
     color: rgb(0, 0, 0);
-    padding: 10px 0;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
 
 .footer-left {
     display: flex;
@@ -285,22 +386,40 @@ footer {
     color: white;
     text-decoration: none;
 }
-/* برای آیکن‌های اجتماعی */
-.social-icons {
+/* تنظیم برای فوتر */
+footer {
+    position: relative; /* برای استفاده از position-relative در فرزندان */
+}
+
+/* تنظیم برای بخش آیکن‌های اجتماعی */
+.footer-social-icons {
     display: flex;
-    justify-content: center; /* مرکز کردن آیکن‌ها */
-    align-items: center; /* وسط چیدمان عمودی */
-    gap: 20px; /* فاصله بین آیکن‌ها */
-    margin-top: 15px;
+    flex-direction: column; /* چیدن عناصر به صورت عمودی */
+    align-items: flex-end; /* تراز کردن به سمت راست */
+    gap: 10px; /* فاصله بین عنوان و آیکن‌ها */
+    padding: 20px 20px 0; /* فاصله داخلی */
+    position: absolute;
+    bottom: 10px; /* فاصله از پایین فوتر */
+    right: 20px; /* فاصله از سمت راست */
 }
 
-.social-icons a {
-    display: inline-block;
-    width: 50px; /* عرض آیکن‌ها */
-    height: 50px; /* ارتفاع آیکن‌ها */
+/* استایل عنوان "Connect With Us" */
+.social-title {
+    font-size: 16px; /* اندازه فونت */
+    font-weight: bold; /* ضخیم‌تر کردن متن */
+    margin: 0; /* حذف فاصله پیش‌فرض */
+    color: #000; /* رنگ عنوان */
 }
 
-.social-icons a img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* حفظ تناسب تصویر */
+/* برای تنظیم اندازه آیکن‌ها */
+.footer-social-icons img {
+    width: 40px; /* عرض آیکن */
+    height: 40px; /* ارتفاع آیکن */
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.2); /* بزرگ‌تر شدن آیکن‌ها در حالت هاور */
+}
+
