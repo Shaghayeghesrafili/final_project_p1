@@ -1,0 +1,398 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* تنظیمات مرکز و راست */
+.header-center {
+    flex: 1; /* فضای باقی‌مانده را اشغال می‌کند */
+    display: flex;
+    justify-content: center;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #444;
+    border-radius: 20px;
+    padding: 5px 15px;
+    gap: 10px; /* فاصله بین فیلد و آیکن */
+}
+
+.search-input {
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    width: 250px; /* عرض باکس جستجو */
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-icon {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.search-icon:hover {
+    color: #00bcd4;
+    transform: scale(1.1);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    gap: 15px; /* فاصله بین آیکن‌ها */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* فاصله بین لوگو و دسته‌بندی‌ها */
+}
+/* آیکون‌ها */
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon-button:hover {
+    color: #00bcd4; /* تغییر رنگ در حالت هاور */
+    transform: scale(1.2); /* کمی بزرگ‌تر شدن آیکون */
+}
+
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* هدر و کتگوری‌ها */
+.categories-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.categories-nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 16px;
+}
+
+/* استایل برای منوی کشویی */
+.dropdown {
+    position: relative; /* برای ایجاد موقعیت نسبی منو */
+}
+/* استایل منوی کشویی */
+.dropdown-menu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column; /* عمودی کردن آیتم‌ها */
+    padding: 10px; /* فاصله داخلی کلی */
+}
+
+/* استایل آیتم‌های منو */
+.dropdown-menu li {
+    padding: 8px 12px; /* فاصله داخلی هر آیتم */
+    margin-bottom: 8px; /* فاصله بین آیتم‌ها */
+    text-align: left;
+    list-style: none;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 14px; /* اندازه فونت */
+    font-weight: 100; /* ضخامت */
+    color: white;
+}
+
+/* حذف فاصله اضافی از آخرین آیتم */
+.dropdown-menu li:last-child {
+    margin-bottom: 0;
+}
+
+/* استایل لینک‌های داخل آیتم‌ها */
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block; /* لینک‌ها بلوکی شوند */
+    font-size: 15px; /* تغییر اندازه فونت لینک */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #444; /* تغییر پس‌زمینه هنگام هاور */
+    border-radius: 4px; /* گرد کردن گوشه‌ها */
+}
+/* نمایش منو هنگام هاور کردن روی کتگوری 2 */
+.dropdown:hover .dropdown-menu {
+    visibility: visible; /* نمایش منو */
+    opacity: 1; /* غیرشفاف شدن */
+}
+
+/* Course details */
+.course-details {
+    padding: 40px 20px;
+}
+
+.course-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.course-title {
+    font-size: 3rem;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.course-subtitle {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.course-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.course-description {
+    flex: 1;
+    color: #ddd;
+    font-size: 1.2rem;
+}
+
+.course-description h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* تنظیمات کلی برای بادی */
+.course-body {
+    display: flex; /* ایجاد چیدمان افقی */
+    gap: 20px; /* فاصله بین بخش چپ و راست */
+    padding: 20px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+/* تنظیمات بخش چپ */
+.course-left {
+    display: flex;
+    flex-direction: column; /* چیدمان عمودی */
+    align-items: center; /* تراز عمودی آیتم‌ها */
+    width: 30%; /* تعیین عرض بخش چپ */
+}
+
+/* استایل تصویر کاور */
+.course-cover {
+    width: 100%; /* پر کردن عرض بخش چپ */
+    height: auto;
+    border-radius: 8px; /* گوشه‌های گرد */
+    margin-bottom: 20px; /* فاصله بین کاور و اطلاعات کاربر */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* سایه برای تصویر */
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+.course-rating {
+    display: flex; /* ستاره‌ها کنار هم */
+    justify-content: left; /* در مرکز قرار دادن ستاره‌ها */
+    align-items: center;
+    margin-top: 10px; /* فاصله بین عنوان و ستاره‌ها */
+}
+
+.star-icon {
+    font-size: 20px; /* اندازه ستاره */
+    color: #edda9f; /* رنگ طلایی */
+    margin-right: 5px; /* فاصله بین ستاره‌ها */
+}
+
+.star-icon:last-child {
+    margin-right: 0; /* حذف فاصله اضافی آخرین ستاره */
+}
+/* استایل اطلاعات کاربر */
+.course-rating-summary {
+    display: flex; /* چینش افقی */
+    align-items: center; /* تراز عمودی */
+    justify-content: left; /* تراز وسط */
+    margin-top: 15px; /* فاصله از ستاره‌های اصلی */
+    color: #ccc; /* رنگ پیش‌فرض برای متن و آیکون */
+    font-size: 14px; /* اندازه متن */
+}
+
+.empty-star-icon {
+    font-size: 30px; /* اندازه ستاره خالی */
+    color: #ccc4c4; /* رنگ ستاره خالی */
+    margin-right: 5px; /* فاصله از متن */
+}
+
+.rating-count {
+    font-size: 20px; /* اندازه متن تعداد */
+    color: #ddd; /* رنگ متن تعداد */
+}
+.user-info {
+    display: flex;
+    align-items: center; /* تراز عمودی آیتم‌ها */
+    gap: 15px; /* فاصله بین آواتار و نام کاربر */
+    margin-top: 10px; /* فاصله از کاور */
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    margin-left: -200px; /* جابه‌جایی به سمت چپ */
+}
+
+/* استایل تصویر آواتار */
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* دایره‌ای کردن تصویر */
+    object-fit: cover; /* تنظیم تصویر داخل دایره */
+    border: 0px solid #00bcd4; /* خط دور آواتار */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* سایه */
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+/* استایل نام کاربر */
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+/* فوتر */
+footer {
+    background-color: #D9D9D9;
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    width: 30%;
+    margin-left: -120px;  /* حرکت دادن ستون‌های سمت چپ به سمت چپ‌تر */
+}
+
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    color: rgb(157, 157, 157);
+    width: 30%;
+    margin-right: -120px;  /* حرکت دادن ستون‌های سمت راست به سمت راست‌تر */
+}
+
+.footer-column {
+    width: 30%;  /* هر ستون 30% از عرض بخش خودش را می‌گیرد */
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* تنظیم برای فوتر */
+footer {
+    position: relative; /* برای استفاده از position-relative در فرزندان */
+}
+
+/* تنظیم برای بخش آیکن‌های اجتماعی */
+.footer-social-icons {
+    display: flex;
+    flex-direction: column; /* چیدن عناصر به صورت عمودی */
+    align-items: flex-end; /* تراز کردن به سمت راست */
+    gap: 10px; /* فاصله بین عنوان و آیکن‌ها */
+    padding: 20px 20px 0; /* فاصله داخلی */
+    position: absolute;
+    bottom: 10px; /* فاصله از پایین فوتر */
+    right: 20px; /* فاصله از سمت راست */
+}
+
+/* استایل عنوان "Connect With Us" */
+.social-title {
+    font-size: 16px; /* اندازه فونت */
+    font-weight: bold; /* ضخیم‌تر کردن متن */
+    margin: 0; /* حذف فاصله پیش‌فرض */
+    color: #000; /* رنگ عنوان */
+}
+
+/* برای تنظیم اندازه آیکن‌ها */
+.footer-social-icons img {
+    width: 40px; /* عرض آیکن */
+    height: 40px; /* ارتفاع آیکن */
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.2); /* بزرگ‌تر شدن آیکن‌ها در حالت هاور */
+}

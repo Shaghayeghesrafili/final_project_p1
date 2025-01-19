@@ -7,12 +7,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
     background-color: black; /* پس‌زمینه مشکی */
     color: white; /* رنگ متن سفید برای خوانایی بهتر */
+    line-height: 1.6;
 }
+
 header {
     display: flex;
     justify-content: flex-start; /* اجزا به سمت چپ هدر منتقل شوند */
@@ -62,6 +61,7 @@ header {
 .search-wrapper:hover .search-input {
     border-color: #888;
 }
+
 /* Hero header with background image */
 .hero-header {
     width: 100%; /* Full width of the viewport */
@@ -75,6 +75,7 @@ header {
     justify-content: center; /* Vertically center all content */
     align-items: flex-start; /* Align to the left */
     padding: 5rem;
+}
 
 .hero-title {
     color: #fff;
@@ -86,13 +87,14 @@ header {
     display: flex;
     align-items: center;
 }
-}
+
 .logo {
     width: 150px; /* تنظیم عرض لوگو */
     height: auto; /* حفظ نسبت تصویر */
     vertical-align: middle; /* تراز وسط با متن */
     margin-right: 5px; /* فاصله بین لوگو و حرف r */
 }
+
 .caption {
     font-size: 1.2rem;
     font-family: 'Fira Sans Extra Condensed', sans-serif;
@@ -102,6 +104,7 @@ header {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     width: 50%; /* Make caption full width */
 }
+
 /* استایل باکس‌های کتگوری */
 .categories-wrapper {
     display: flex;
@@ -111,6 +114,7 @@ header {
     padding: 10px 20px;
     background-color: #000000;
 }
+
 .arrow-button {
     background-color: #ffffff00;
     color: rgb(255, 255, 255);
@@ -133,14 +137,17 @@ header {
 .categories-section {
     display: flex;
     gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    width: 100%;
+    overflow-x: auto; /* اسکرول افقی را فعال می‌کند */
+    scroll-behavior: smooth; /* حرکت نرم هنگام اسکرول */
+    width: 100%; /* عرض کامل */
+    padding: 10px 0;
 }
+
 .categories-section {
     overflow-x: hidden;  /* جلوگیری از اسکرول افقی */
     overflow-y: hidden;  /* جلوگیری از اسکرول عمودی */
 }
+
 .category-box {
     flex: 0 0 auto;
     width: 170px;
@@ -180,6 +187,7 @@ header {
 .category-box:nth-child(5) {
     background-image: url('image/Group28.png');
 }
+
 /* سبک‌دهی بخش عنوان */
 .artworks-section {
     margin: 50px 0;
@@ -232,7 +240,8 @@ header {
 .gallery-item:hover {
     transform: scale(1.05); /* افکت بزرگنمایی هنگام هاور */
 }
-/* سبک‌دهی گالری بخش کورس *//* گالری بخش کورس */
+
+/* گالری بخش کورس */
 .courses-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -258,7 +267,6 @@ header {
 .courses-gallery .gallery-item:hover {
     transform: scale(1.05); /* افکت بزرگنمایی هنگام هاور */
 }
-
 
 /* گالری بخش بلاگ */
 .blogs-gallery {
@@ -330,7 +338,7 @@ header {
     font-size: 14px;
 }
 
-/* فوتر */
+
 footer {
     background-color: #D9D9D9;
     color: rgb(0, 0, 0);
@@ -345,7 +353,6 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 
 .footer-left {
     display: flex;
@@ -386,6 +393,7 @@ footer {
     color: white;
     text-decoration: none;
 }
+
 /* تنظیم برای فوتر */
 footer {
     position: relative; /* برای استفاده از position-relative در فرزندان */
@@ -422,4 +430,3 @@ footer {
 .footer-social-icons img:hover {
     transform: scale(1.2); /* بزرگ‌تر شدن آیکن‌ها در حالت هاور */
 }
-
