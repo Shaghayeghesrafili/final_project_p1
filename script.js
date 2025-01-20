@@ -9,3 +9,4 @@ leftArrow.addEventListener("click", () => {
 rightArrow.addEventListener("click", () => {
     categoriesSection.scrollBy({ left: 200, behavior: "smooth" });
 });
+

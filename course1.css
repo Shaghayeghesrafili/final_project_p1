@@ -31,7 +31,7 @@ header {
 .search-wrapper {
     display: flex;
     align-items: center;
-    background-color: #444;
+    background-color: #d1d1d1;
     border-radius: 20px;
     padding: 5px 15px;
     gap: 10px; /* فاصله بین فیلد و آیکن */
@@ -40,7 +40,7 @@ header {
 .search-input {
     border: none;
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     outline: none;
     width: 250px; /* عرض باکس جستجو */
     font-size: 14px;
@@ -54,14 +54,14 @@ header {
 .search-icon {
     background: none;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     font-size: 18px;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .search-icon:hover {
-    color: #00bcd4;
+    color: #ffd500;
     transform: scale(1.1);
 }
 
@@ -88,7 +88,7 @@ header {
 }
 
 .icon-button:hover {
-    color: #00bcd4; /* تغییر رنگ در حالت هاور */
+    color: #ffd500; /* تغییر رنگ در حالت هاور */
     transform: scale(1.2); /* کمی بزرگ‌تر شدن آیکون */
 }
 
@@ -113,7 +113,9 @@ header {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-size: 16px;
 }
-
+.categories-nav{
+    color: ;
+}
 /* استایل برای منوی کشویی */
 .dropdown {
     position: relative; /* برای ایجاد موقعیت نسبی منو */
@@ -248,7 +250,7 @@ header {
 }
 
 .star-icon {
-    font-size: 20px; /* اندازه ستاره */
+    font-size: 30px; /* اندازه ستاره */
     color: #edda9f; /* رنگ طلایی */
     margin-right: 5px; /* فاصله بین ستاره‌ها */
 }
@@ -268,13 +270,115 @@ header {
 
 .empty-star-icon {
     font-size: 30px; /* اندازه ستاره خالی */
-    color: #ccc4c4; /* رنگ ستاره خالی */
+    color: #edda9f; /* رنگ ستاره خالی */
     margin-right: 5px; /* فاصله از متن */
 }
 
 .rating-count {
     font-size: 20px; /* اندازه متن تعداد */
     color: #ddd; /* رنگ متن تعداد */
+}
+.course-cart-container {
+    display: flex;
+    align-items: center; /* تراز عمودی */
+    justify-content: center; /* تراز افقی */
+    gap: 10px; /* فاصله بین آیکن و متن */
+    padding: 10px 20px;
+    background-color: #D9D9D9; /* رنگ پس‌زمینه */
+    border-radius: 25px; /* گوشه‌های گرد */
+    margin-top: 30px; /* فاصله از بخش امتیازات */
+    color: #120A0A;
+    font-size: 16px;
+    width: fit-content; /* عرض به اندازه محتوا */
+    transition: background-color 0.3s ease; /* افکت هاور */
+}
+
+.course-cart-container:hover {
+    background-color: #363737; /* تغییر رنگ پس‌زمینه هنگام هاور */
+    color: #ffd500;
+}
+
+.cart-icon {
+    font-size: 24px; /* اندازه آیکن */
+}
+
+.course-duration {
+    font-size: 16px; /* اندازه متن */
+}
+
+.course-info-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 50px 100px; /* حذف padding بالای container */
+}
+
+.course-info-box {
+    background-color: #C4C4C4;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px; /* عرض مشخص */
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    gap: 20px;
+    margin-top: -300px; /* فاصله منفی برای بالا آوردن مستطیل */
+    position: relative; /* ایجاد موقعیت قابل تغییر */
+    z-index: 50; /* نمایش در بالای دیگر عناصر */
+    margin-top: -400px; /* بالا آوردن مستطیل */
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* فاصله بین آیکن و متن */
+}
+
+.info-title {
+    font-size: 16px;
+    
+}
+
+.info-item i {
+    font-size: 30px; /* اندازه آیکن‌ها */
+    align-items: center; /* تراز کردن آیکن و متن در یک خط */
+    color: #000000;
+}
+.software-section {
+    display: flex;
+    gap: 15px;
+    margin-top: 50px; /* فاصله از بالا نرم‌افزارها */
+    flex-direction: column; /* نمایش آیتم‌ها به صورت عمودی */
+    justify-content: flex-start; /* تراز کردن آیکن‌ها به سمت چپ */
+    
+}
+/* فاصله‌گذار */
+.separator {
+    height: 30px; /* ارتفاع فاصله که می‌خواهید بین دو بخش باشد */
+    width: 100%; /* عرض کل بخش */
+}
+.software-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* فاصله بین نرم‌افزارها */
+}
+
+.software-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.software-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.software-upload {
+    font-size: 20px;
+    color: #ffd500;
+    cursor: pointer;
 }
 .user-info {
     display: flex;
@@ -303,13 +407,256 @@ header {
     color: white;
     font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
+/* Tags Section */
+.tags-container {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 20px; /* فاصله مناسب از بالا و اطراف */
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    margin-top: -100px; /* بالا آوردن تگ‌ها */
+}
 
-/* فوتر */
+.tags-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px; /* فاصله بین عنوان و خط */
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #cdcdcd;
+    margin: 10px 0; /* فاصله بین خط و عناصر بالا/پایین */
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap; /* برای جلوگیری از خروج تگ‌ها از صفحه */
+    gap: 10px; /* فاصله بین تگ‌ها */
+    margin-top: 10px;
+}
+
+.tags a {
+    background-color: #444;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tags a:hover {
+    background-color: #ffd500;
+    color: rgb(0, 0, 0);
+}
+.course-description-container {
+    margin: 30px 20px; /* فاصله از اطراف */
+    font-family: 'Arial', sans-serif; /* فونت دلخواه */
+    color: #ffffff; /* رنگ متن */
+}
+
+.course-title {
+    font-size: 28px; /* اندازه فونت عنوان */
+    margin-bottom: 15px; /* فاصله عنوان از متن زیرین */
+    color: #ffd500; /* رنگ خاص برای عنوان */
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.course-text {
+    font-size: 18px; /* اندازه متن توضیحات */
+    line-height: 1.8; /* فاصله بین خطوط متن */
+    color: #ddd; /* رنگ متن توضیحات */
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.course-link {
+    color: #ffd500; /* رنگ لینک دانلود */
+    text-decoration: none; /* حذف خط زیر لینک */
+    transition: color 0.3s ease; /* افکت تغییر رنگ */
+}
+
+.course-link:hover {
+    color: #ffffff; /* تغییر رنگ لینک هنگام هاور */
+}
+
+.more-link {
+    display: block; /* نمایش لینک به صورت بلوک */
+    margin-top: 10px; /* فاصله از متن قبلی */
+    color: #ffd500; /* رنگ لینک More */
+    text-decoration: none; /* حذف خط زیر لینک */
+    transition: color 0.3s ease;
+}
+
+.more-link:hover {
+    color: #ffffff; /* تغییر رنگ لینک هنگام هاور */
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #cdcdcd;
+    margin: 10px 0; /* فاصله بین خط و عناصر بالا/پایین */
+}
+.comments-section {
+    max-width: 800px;
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.comments-title {
+    font-size: 24px;
+    margin-bottom:0px;
+    margin-top: 1px; /* افزودن فاصله 20 پیکسل از بالای هر پروفایل */
+    text-align: left;
+    color: #ffffff;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    margin-bottom: 20px; /* فاصله 20 پیکسل بین هر کامنت */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    margin-top: 50px; /* افزودن فاصله 20 پیکسل از بالای هر پروفایل */
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-size: 20px;
+    color: #fafafa;
+    margin: 0;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 500;
+}
+
+.rating {
+    display: flex;
+    gap: 2px;
+    margin-left: 10px;
+}
+
+.rating i {
+    color: #edda9f;
+    font-size: 20px;
+}
+
+.comment-content {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    color: #555;
+    display: inline-block; /* مستطیل به اندازه محتوایش تغییر می‌کند */
+    word-wrap: break-word; /* شکستن خطوط بلند */
+}
+
+.comment-content p {
+    margin: 0;
+    word-wrap: break-word;
+}
+.hidden {
+    display: none;
+}
+
+.more-comments {
+    background-color: transparent;
+    color: #ffd500;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* فاصله بین متن و آیکون */
+}
+
+.more-comments:hover {
+    color: #ffffff;
+}
+
+/* در صورت وجود عناصر قبل یا بعد از .more-comments */
+.comment, .add-comment {
+    border-bottom: none; /* حذف خط زیرین */
+    margin-bottom: 0; /* حذف حاشیه پایین */
+    padding-bottom: 0; /* حذف فاصله داخلی پایین */
+}
+
+.more-comments:hover {
+    color: #ffffff;
+}
+.comment.last-comment {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.add-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+.send-button {
+    background-color: transparent; /* حذف رنگ پس‌زمینه */
+    color: #ffffff;
+    border: none; /* حذف حاشیه */
+    padding: 0; /* حذف فضای داخلی اضافی */
+    cursor: pointer; /* تغییر نشانگر موس به حالت اشاره‌گر */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.send-button i {
+    font-size: 25px;
+}
+
+.send-button:hover {
+    color: #ffd500;
+}
+
 footer {
     background-color: #D9D9D9;
     color: rgb(0, 0, 0);
     padding: 20px 0;
     text-align: center;
+    
 }
 
 .footer-container {
@@ -324,8 +671,9 @@ footer {
     display: flex;
     justify-content: space-between;
     font-family: 'Fira Sans Extra Condensed', sans-serif;
-    width: 30%;
-    margin-left: -120px;  /* حرکت دادن ستون‌های سمت چپ به سمت چپ‌تر */
+    width: 50%;
+    margin-left: -120px; /* حرکت ستون‌های سمت چپ به سمت چپ‌تر */
+    gap: 40px; /* فاصله بین ستون‌ها را تنظیم می‌کند */
 }
 
 .footer-right {
@@ -334,20 +682,29 @@ footer {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     color: rgb(157, 157, 157);
     width: 30%;
-    margin-right: -120px;  /* حرکت دادن ستون‌های سمت راست به سمت راست‌تر */
+    margin-right: -120px; /* حرکت ستون‌های سمت راست به سمت راست‌تر */
 }
 
 .footer-column {
-    width: 30%;  /* هر ستون 30% از عرض بخش خودش را می‌گیرد */
+    width: 50%; /* هر ستون 30% از عرض بخش خودش را می‌گیرد */
 }
 
 .footer-column h3 {
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .footer-column p {
     margin: 5px 0;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; /* نمایش اشاره‌گر برای تعامل */
+}
+
+.footer-column p:hover {
+    color: rgb(50, 50, 50); /* رنگ تیره‌تر هنگام هاور */
+    transform: scale(1.1); /* کمی بزرگ شدن متن */
 }
 
 .footer-column ul {
@@ -358,41 +715,73 @@ footer {
 .footer-column ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.footer-column ul li a:hover {
+    color: rgb(50, 50, 50); /* تغییر رنگ لینک‌ها هنگام هاور */
+    transform: scale(1.1); /* کمی بزرگ شدن لینک */
+}
 /* تنظیم برای فوتر */
 footer {
     position: relative; /* برای استفاده از position-relative در فرزندان */
 }
 
-/* تنظیم برای بخش آیکن‌های اجتماعی */
 .footer-social-icons {
-    display: flex;
-    flex-direction: column; /* چیدن عناصر به صورت عمودی */
-    align-items: flex-end; /* تراز کردن به سمت راست */
-    gap: 10px; /* فاصله بین عنوان و آیکن‌ها */
-    padding: 20px 20px 0; /* فاصله داخلی */
+    display: flex; /* فعال‌سازی فلکس‌باکس */
+    flex-direction: column; /* چیدمان عمودی */
+    align-items: center; /* وسط‌چین کردن محتوا در جهت افقی */
+    gap: 10px; /* فاصله بین عنوان و آیکون‌ها */
+    padding: 20px; /* فاصله داخلی */
     position: absolute;
-    bottom: 10px; /* فاصله از پایین فوتر */
+    bottom: 20px; /* فاصله از پایین فوتر */
     right: 20px; /* فاصله از سمت راست */
 }
 
 /* استایل عنوان "Connect With Us" */
 .social-title {
-    font-size: 16px; /* اندازه فونت */
-    font-weight: bold; /* ضخیم‌تر کردن متن */
+    font-size: 25px; /* اندازه فونت */
+    font-weight: 100; /* ضخیم‌تر کردن متن */
+    align-items: L;
     margin: 0; /* حذف فاصله پیش‌فرض */
-    color: #000; /* رنگ عنوان */
+    color: #666666; /* رنگ عنوان */
+    text-align: center; /* وسط‌چین کردن متن */
+    justify-content: flex-start;
+    margin-right: 200PX;
 }
 
-/* برای تنظیم اندازه آیکن‌ها */
+/* تنظیم چیدمان آیکون‌ها */
+.social-icons {
+    display: flex; /* چیدمان افقی آیکون‌ها */
+    gap: 10px; /* فاصله بین آیکون‌ها */
+}
+
+/* تنظیم استایل آیکون‌ها */
 .footer-social-icons img {
-    width: 40px; /* عرض آیکن */
-    height: 40px; /* ارتفاع آیکن */
+    width: 40px; /* عرض آیکون */
+    height: 40px; /* ارتفاع آیکون */
     object-fit: contain;
     transition: transform 0.2s ease;
 }
 
 .footer-social-icons img:hover {
-    transform: scale(1.2); /* بزرگ‌تر شدن آیکن‌ها در حالت هاور */
+    transform: scale(1.2); /* بزرگ‌تر شدن آیکون‌ها در حالت هاور */
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #D9D9D9; /* همان رنگ فوتر */
+    font-family: 'Fira Sans Extra Condensed', sans-serif; /* فونت مشابه بخش‌های دیگر */
+    font-size: 14px; /* اندازه متن */
+    color: rgb(0, 0, 0);
+    border-top: 1px solid #ccc; /* خط جداکننده برای بخش پایین */
+}
+
+.footer-bottom a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
 }
