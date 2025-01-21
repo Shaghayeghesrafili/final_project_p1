@@ -1,4 +1,4 @@
-/* Reset default styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,18 +7,20 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: black; /* پس‌زمینه مشکی */
-    color: white; /* رنگ متن سفید برای خوانایی بهتر */
+    background-color: black; 
+    color: white; 
     line-height: 1.6;
 }
 
 header {
     display: flex;
-    justify-content: flex-start; /* اجزا به سمت چپ هدر منتقل شوند */
+    justify-content: flex-start; 
     align-items: center;
     padding: 20px;
     background-color: #333;
     color: white;
+    font-weight: lighter
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
 
 .header-left {
@@ -50,7 +52,7 @@ header {
     background-color: #dddddd00;
     border: none;
     cursor: pointer;
-    margin-right: 10px; /* فاصله بین آیکن و باکس جستجو */
+    margin-right: 10px; 
 }
 
 .search-icon i {
@@ -64,35 +66,51 @@ header {
 
 /* Hero header with background image */
 .hero-header {
-    width: 100%; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    background-image: url('E:/site/image/mert-genccinar-neoplatonic-mystic.jpg'); /* Path to your image */
+    position: relative; 
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    width: 100%;
+    height: 100vh;
+    font-size: 60px;
+    background-image: url('E:/site/image/mert-genccinar-neoplatonic-mystic.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Vertically center all content */
-    align-items: flex-start; /* Align to the left */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding: 5rem;
+    font-weight: lighter;
 }
 
-.hero-title {
-    color: #fff;
-    font-size: 10rem; /* Make the title larger */
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin: 0;
-    text-align: left; /* Align text to the left */
+.header-icons {
+    position: absolute; 
+    top: 20px; 
+    right: 0; 
+    padding-right: 20px; 
     display: flex;
     align-items: center;
+    gap: 15px; 
+    z-index: 1000;
+}
+
+.header-icons i {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header-icons i:hover {
+    transform: scale(1.2);
+    color: #ffc107;
 }
 
 .logo {
-    width: 150px; /* تنظیم عرض لوگو */
-    height: auto; /* حفظ نسبت تصویر */
-    vertical-align: middle; /* تراز وسط با متن */
-    margin-right: 5px; /* فاصله بین لوگو و حرف r */
+    width: 150px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-right: 5px; 
 }
 
 .caption {
@@ -106,27 +124,103 @@ header {
 }
 /* برای بخش آیکن‌های بالا سمت چپ */
 .header-icons {
-    position: absolute; /* برای تنظیم دقیق مکان */
-    top: 20px; /* فاصله از بالای صفحه */
-    right: 20px; /* فاصله از سمت چپ صفحه */
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.header-icons i, .profile-icon i {
+    font-size: 24px; 
+    cursor: pointer;
+    color: white; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.header-icons i:hover, .profile-icon i:hover {
+    transform: scale(1.2); 
+    color: #ffc107; 
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.568);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #000000;
+}
+
+.modal-content {
+    width: 400px; 
+    font-size: 0.5rem;
+}
+
+.profile-icon {
     display: flex;
     align-items: center;
-    gap: 15px; /* فاصله بین آیکن‌ها */
-    font-size: 2rem; /* اندازه آیکن‌ها */
-    color: white; /* رنگ آیکن‌ها */
+    justify-content: center;
 }
 
-.header-icons i {
-    cursor: pointer; /* نشانگر اشاره‌گر برای آیکن‌ها */
-    transition: transform 0.2s, color 0.2s; /* انیمیشن تغییرات هنگام هاور */
+h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
 }
 
-.header-icons i:hover {
-    transform: scale(1.2); /* بزرگ‌تر شدن هنگام هاور */
-    color: #ffd700; /* تغییر رنگ هنگام هاور */
+.form-group {
+    margin-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
-/* استایل باکس‌های کتگوری */
+label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 3px
+    color: #555;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #ffd700;
+    color: #000000;
+}
+
+
 .categories-wrapper {
     display: flex;
     align-items: center;
@@ -158,43 +252,43 @@ header {
 .categories-section {
     display: flex;
     gap: 20px;
-    overflow-x: auto; /* اسکرول افقی را فعال می‌کند */
-    scroll-behavior: smooth; /* حرکت نرم هنگام اسکرول */
-    width: 100%; /* عرض کامل */
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    width: 100%; 
     padding: 10px 0;
 }
 
 .categories-section {
-    overflow-x: hidden;  /* جلوگیری از اسکرول افقی */
-    overflow-y: hidden;  /* جلوگیری از اسکرول عمودی */
+    overflow-x: hidden;  
+    overflow-y: hidden;  
 }
 
 .category-box {
     flex: 0 0 auto;
     width: 170px;
-    height: 69px; /* ارتفاع مشخص برای تصاویر */
+    height: 69px; 
     padding: 15px;
     border: 1px solid #000000;
     border-radius: 20px;
-    background-color: #f9f9f9; /* رنگ پس‌زمینه در صورت عدم بارگذاری تصویر */
-    background-image: url('your-image-path.jpg'); /* مسیر تصویر */
-    background-size: cover; /* تصویر تمام باکس را پوشش می‌دهد */
-    background-position: center; /* تنظیم موقعیت تصویر */
+    background-color: #f9f9f9; 
+    background-image: url('your-image-path.jpg'); 
+    background-size: cover; 
+    background-position: center; 
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     text-align: center;
-    color: white; /* رنگ متن برای خوانایی بهتر */
+    color: white; 
     display: flex;
     flex-direction: column;
-    justify-content: flex; /* متن در پایین باکس نمایش داده می‌شود */
+    justify-content: flex; 
 }
 .category-box:hover {
-    background-color: #ddd; /* تغییر رنگ پس‌زمینه در حالت هاور */
-    transform: scale(1.05); /* افکت بزرگنمایی هنگام هاور */
-    box-shadow: 0 5px 5px #ffd90068; /* افزایش شدت سایه */
-    color: #ffd700; /* تغییر رنگ متن در حالت هاور */
+    background-color: #ddd; 
+    transform: scale(1.05); 
+    box-shadow: 0 5px 5px #ffd90068; 
+    color: #ffd700; 
 }
 
-/* برای هر باکس تصویر خاصی تنظیم کنید */
+
 .category-box:nth-child(1) {
     background-image: url('image/Group23.png');
 }
@@ -222,8 +316,16 @@ header {
 .category-box:nth-child(6) {
     background-image: url('image/Group 26.png');
 }
+.category-box:nth-child(7) {
+    background-image: url('image/Group11.png');
+}
+.category-box:nth-child(8) {
+    background-image: url('image/Group15.png');
+}
+.category-box:nth-child(9) {
+    background-image: url('image/Group5.png');
+}
 
-/* سبک‌دهی بخش عنوان */
 .artworks-section {
     margin: 50px 0;
     padding: 0 20px;
@@ -250,13 +352,14 @@ header {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .section-more:hover {
     text-decoration: underline;
 }
 
-/* سبک‌دهی گالری */
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -267,114 +370,234 @@ header {
     background-color: #ddd;
     background-size: cover;
     background-position: center;
-    aspect-ratio: 1/1; /* برای ایجاد مربع */
-    border-radius: 8px; /* گوشه‌های گرد */
+    aspect-ratio : 1/1; 
+    border-radius: 8px; 
     transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
-    transform: scale(1.05); /* افکت بزرگنمایی هنگام هاور */
+    transform: scale(1.05); 
 }
 
-/* گالری بخش کورس */
-.courses-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
 
-.courses-gallery .gallery-item {
-    background-color: #ddd;
-    position: relative;
-    width: 100%;
-    height: 350px; /* ارتفاع بیشتر برای بخش کورس */
-    overflow: hidden; /* جلوگیری از برش شدن تصویر */
-    border-radius: 8px;
+.courses-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: flex-start; 
 }
-
-.courses-gallery .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* یا contain برای فیت شدن دقیق تصویر */
-    border-radius: 8px;
-}
-
-.courses-gallery .gallery-item:hover {
-    transform: scale(1.05); /* افکت بزرگنمایی هنگام هاور */
-}
-
-/* گالری بخش بلاگ */
-.blogs-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.blogs-gallery .gallery-item {
-    background-color: #ddd;
-    position: relative;
-    width: 100%;
-    height: 350px; /* ارتفاع بیشتر برای بخش بلاگ */
-    overflow: hidden; /* جلوگیری از برش شدن تصویر */
-    border-radius: 8px;
-}
-
-.blogs-gallery .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.blogs-gallery .gallery-item:hover {
-    transform: scale(1.05);
-}
-
-/* گالری بخش ارت‌ورک (بدون تغییر ارتفاع) */
-.artworks-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.artworks-gallery .gallery-item {
-    background-color: #ddd;
-    position: relative;
-    width: 100%;
-    height: 250px; /* ارتفاع پیش‌فرض برای بخش ارت‌ورک */
+.course-item {
+    width: 350px; 
+    background: #D9D9D9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     overflow: hidden;
-    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 0; 
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px); 
+    box-sizing: border-box; 
+    height: 350px; 
+    color: black;
+    margin-bottom: 20px;
 }
 
-.artworks-gallery .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+
+.course-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+.course-image-wrapper {
+    width: 100%; 
+    height: auto; 
+    max-height: 200px; 
+    overflow: hidden; 
 }
 
-.artworks-gallery .gallery-item:hover {
-    transform: scale(1.05);
+.course-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
 }
 
-.courses-gallery .item-title {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.courses-gallery .user-profile {
+.course-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 68px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    justify-content: center;
 }
 
-.courses-gallery .user-name {
-    margin-left: 10px;
+.course-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+}
+
+.course-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.course-rating {
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.course-user {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
     font-size: 14px;
+    color: #555;
+}
+
+.course-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #868686;
+}
+
+.course-item:hover .course-image-wrapper img {
+    transform: scale(1.1); 
 }
 
 
+.course-item:hover .course-title {
+    color: #625222; 
+    transition: color 0.3s ease;
+}
+a {
+    text-decoration: none; 
+}
+
+.blogs-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: flex-start; 
+    margin-bottom: 50px; 
+    
+}
+
+.blog-item {
+    width: 350px; 
+    background: #D9D9D9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 0; 
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px); 
+    box-sizing: border-box; 
+    height: 350px; 
+    margin-bottom: 50px; 
+    color: #000000;
+}
+
+
+.blog-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image-wrapper {
+    width: 100%; 
+    height: auto; 
+    max-height: 200px; 
+    overflow: hidden; 
+}
+
+.blog-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+
+.blog-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 68px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px;
+}
+
+.blog-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.blog-user {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 14px;
+    color: #555;
+}
+
+
+.blog-item:hover .blog-image-wrapper img {
+    transform: scale(1.1); 
+}
+
+
+.blog-item:hover .blog-title {
+    color: #625222; 
+    transition: color 0.3s ease;
+}
 footer {
+    padding-top: 30px; 
     background-color: #D9D9D9;
     color: rgb(0, 0, 0);
     padding: 20px 0;
@@ -395,8 +618,8 @@ footer {
     justify-content: space-between;
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     width: 50%;
-    margin-left: -120px; /* حرکت ستون‌های سمت چپ به سمت چپ‌تر */
-    gap: 40px; /* فاصله بین ستون‌ها را تنظیم می‌کند */
+    margin-left: -120px; 
+    gap: 40px; 
 }
 
 .footer-right {
@@ -405,11 +628,11 @@ footer {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     color: rgb(157, 157, 157);
     width: 30%;
-    margin-right: -120px; /* حرکت ستون‌های سمت راست به سمت راست‌تر */
+    margin-right: -120px; 
 }
 
 .footer-column {
-    width: 50%; /* هر ستون 30% از عرض بخش خودش را می‌گیرد */
+    width: 50%; 
 }
 
 .footer-column h3 {
@@ -422,12 +645,12 @@ footer {
     font-size: 20px;
     color: rgb(0, 0, 0);
     transition: color 0.3s ease, transform 0.3s ease;
-    cursor: pointer; /* نمایش اشاره‌گر برای تعامل */
+    cursor: pointer; 
 }
 
 .footer-column p:hover {
-    color: rgb(50, 50, 50); /* رنگ تیره‌تر هنگام هاور */
-    transform: scale(1.1); /* کمی بزرگ شدن متن */
+    color: rgb(50, 50, 50); 
+    transform: scale(1.1); 
 }
 
 .footer-column ul {
@@ -442,62 +665,62 @@ footer {
 }
 
 .footer-column ul li a:hover {
-    color: rgb(50, 50, 50); /* تغییر رنگ لینک‌ها هنگام هاور */
-    transform: scale(1.1); /* کمی بزرگ شدن لینک */
+    color: rgb(50, 50, 50); 
+    transform: scale(1.1); 
 }
-/* تنظیم برای فوتر */
+
 footer {
-    position: relative; /* برای استفاده از position-relative در فرزندان */
+    position: relative; 
 }
 
 .footer-social-icons {
-    display: flex; /* فعال‌سازی فلکس‌باکس */
-    flex-direction: column; /* چیدمان عمودی */
-    align-items: center; /* وسط‌چین کردن محتوا در جهت افقی */
-    gap: 10px; /* فاصله بین عنوان و آیکون‌ها */
-    padding: 20px; /* فاصله داخلی */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 20px; 
     position: absolute;
-    bottom: 20px; /* فاصله از پایین فوتر */
-    right: 20px; /* فاصله از سمت راست */
+    bottom: 20px; 
+    right: 20px; 
 }
 
-/* استایل عنوان "Connect With Us" */
+
 .social-title {
-    font-size: 25px; /* اندازه فونت */
-    font-weight: 100; /* ضخیم‌تر کردن متن */
+    font-size: 25px;
+    font-weight: 100; 
     align-items: L;
-    margin: 0; /* حذف فاصله پیش‌فرض */
-    color: #666666; /* رنگ عنوان */
-    text-align: center; /* وسط‌چین کردن متن */
+    margin: 0; 
+    color: #666666; 
+    text-align: center; 
     justify-content: flex-start;
     margin-right: 200PX;
 }
 
-/* تنظیم چیدمان آیکون‌ها */
+
 .social-icons {
-    display: flex; /* چیدمان افقی آیکون‌ها */
-    gap: 10px; /* فاصله بین آیکون‌ها */
+    display: flex; 
+    gap: 10px; 
 }
 
-/* تنظیم استایل آیکون‌ها */
+
 .footer-social-icons img {
-    width: 40px; /* عرض آیکون */
-    height: 40px; /* ارتفاع آیکون */
+    width: 40px; 
+    height: 40px; 
     object-fit: contain;
     transition: transform 0.2s ease;
 }
 
 .footer-social-icons img:hover {
-    transform: scale(1.2); /* بزرگ‌تر شدن آیکون‌ها در حالت هاور */
+    transform: scale(1.2); 
 }
 .footer-bottom {
     text-align: center;
     padding: 10px 0;
-    background-color: #D9D9D9; /* همان رنگ فوتر */
-    font-family: 'Fira Sans Extra Condensed', sans-serif; /* فونت مشابه بخش‌های دیگر */
-    font-size: 14px; /* اندازه متن */
+    background-color: #D9D9D9; 
+    font-family: 'Fira Sans Extra Condensed', sans-serif; 
+    font-size: 14px; 
     color: rgb(0, 0, 0);
-    border-top: 1px solid #ccc; /* خط جداکننده برای بخش پایین */
+    border-top: 1px solid #ccc; 
 }
 
 .footer-bottom a {

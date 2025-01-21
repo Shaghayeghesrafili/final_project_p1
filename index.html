@@ -9,12 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- بخش هدر -->
+    
     <header class="hero-header">
+        <div class="header-icons">
+            <i class="fa fa-shopping-cart" title="Cart"></i>
+            <i class="fa fa-bell" title="Notifications"></i>
+            <div class="profile-icon" onclick="toggleLoginModal()">
+                <i class="fa fa-user" title="Profile"></i>
+            </div>
+        </div>
         <h1 class="hero-title">
-            <img src="e:\site\image\Group1.png" alt="Logo" class="logo">rta
+            <img src="e:\site\image\Group1.png" alt="Logo" class="logo">RTA
         </h1>
-        <p class="caption">a world from your creativity. .</p>
+        <p class="caption">a world from your creativity...</p>
         <div class="header-left">
             <div class="search-wrapper">
                 <button class="search-icon">
@@ -23,14 +30,30 @@
                 <input type="text" placeholder="Search..." class="search-input">
             </div>
         </div>
-        <div class="header-icons">
-            <i class="fa fa-shopping-cart" title="Cart"></i>
-            <i class="fa fa-bell" title="Notifications"></i>
-            <i class="fa fa-user" title="Profile"></i>
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <h2>Login to ARTA</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="keep-signed-in">
+                        <label for="keep-signed-in">KEEP ME SIGNED IN</label>
+                    </div>
+                    <button type="submit" class="login-button">Login</button>
+                </form>
+            </div>
+        </div>
         </div>
     </header>
 
-    <!-- بخش کتگوری‌ها -->
+    
     <section class="categories-wrapper">
         <button id="left-arrow" class="arrow-button">&larr;</button>
         <div class="categories-section">
@@ -59,13 +82,13 @@
                 <h3>comic</h3>
             </div>
             <div class="category-box">
-                <h3>Sketching</h3>  
+                <h3>Concept Art</h3>  
             </div>
         </div>
         <button id="right-arrow" class="arrow-button">&rarr;</button>
     </section>
 
-    <!-- بخش آثار هنری -->
+    
     <<section class="artworks-section">
         <div class="section-header">
             <h2 class="section-title">Artworks</h2>
@@ -73,68 +96,218 @@
         </div>
         <div class="gallery">
             <div class="gallery-item wide" style="background-image: url('image/charles-lee-revise-01ekko-memorial-wall-closeup-cl-03-copy 1.png');"></div><div class="gallery-item tall" style="background-image: url('image/a3fb1ebf2c55c31cad0979dbd3b0b92c 1.png');"></div>
-            <div class="gallery-item tall wide" style="background-image: url('image/evgeniia-petrova-1 1.png');"></div>
-            <div class="gallery-item" style="background-image: url('image/eugene-kopytok-2 1.png');"></div>
+            <div class="gallery-item tall wide" style="background-image: url('image/nicolas-neve-1.jpg');"></div>
+            <div class="gallery-item" style="background-image: url('image/lora-kolori-untitled-camera-45-fullquality-001.jpg');"></div>
             <div class="gallery-item" style="background-image: url('image/jakub-bazyluk-11-mid-shot-squx-flammenwerfer-tarkovsky-8bit-final-jb-07-09-2024 1.png');"></div>
-            <div class="gallery-item" style="background-image: url('image/placeholder.png');"></div>
+            <div class="gallery-item" style="background-image: url('image/polina-chergintsova-book-01.jpg');"></div>
         </div>
     </section>
     
 
-    <!-- بخش دوره‌ها -->
-<section class="artworks-section">
+    
+    <section class="courses-section">
+        <div class="section-header">
+            <h2 class="section-title">Courses & Tutorials</h2>
+            <a href="#" class="section-more">More →</a>
+        </div>
+        <div class="courses-container">
+            
+            <a href="course3.html" class="course-link" target="_blank">
+                <div class="course-item">
+                    <div class="course-image-wrapper">
+                        <img src="image/file(1).jpg" alt="Course Image" class="course-image">
+                        <div class="course-icon">
+                            <img src="image/channels4_profile 1.png" alt="Course Icon">
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <div class="course-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="far fa-star empty-star-icon"></i>
+                            </div>
+                            <h3 class="course-title">Complete Guide to Zbrush 2022</h3>
+                            <div class="course-user">
+                                <img src="image/24d4407662c4e1c8833bd1414c1c82db.jpg" alt="User Avatar" class="user-avatar">
+                                <span class="user-name">Nexttut Education</span>
+                            </div>
+                        </div>
+                        <div class="course-price">USD $15.00</div>
+                    </div>
+                </div>
+            </a>
+   
+            <a href="course2.html" class="course-link" target="_blank">
+                <div class="course-item">
+                    <div class="course-image-wrapper">
+                        <img src="image/file.jpg" alt="Course Image" class="course-image">
+                        <div class="course-icon">
+                            <img src="c:\Users\asus\Downloads\Blender_logo_no_text.svg 1.png" alt="Course Icon">
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <div class="course-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="far fa-star empty-star-icon"></i>
+                                <i class="far fa-star empty-star-icon"></i>
+                            </div>
+                            <h3 class="course-title">Car modeling for Plasticity 3D: BrabHam BT 62</h3>
+                            <div class="course-user">
+                                <img src="image/f788a9ab28230b874cdc46f8cc615f3d.jpg" alt="User Avatar" class="user-avatar">
+                                <span class="user-name">Poly Paul</span>
+                            </div>
+                        </div>
+                        <div class="course-price">USD $55.50+</div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="course1.html" class="course-link" target="_blank">
+                <div class="course-item">
+                    <div class="course-image-wrapper">
+                        <img src="image/file5.jpg" alt="Course Image" class="course-image">
+                        <div class="course-icon">
+                            <img src="image/Procreate-icon 6.png" alt="Course Icon">
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <div class="course-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="far fa-star empty-star-icon"></i>
+                            </div>
+                            <h3 class="course-title">Improve your painting process</h3>
+                            <div class="course-user">
+                                <img src="image/bfa45357fa0f2b0ab76e7289cf5e5c06.jpg" alt="User Avatar" class="user-avatar">
+                                <span class="user-name">Atey Ghailan</span>
+                            </div>
+                        </div>
+                        <div class="course-price">USD $5.00+</div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="course4.html" class="course-link" target="_blank">
+                <div class="course-item">
+                    <div class="course-image-wrapper">
+                        <img src="image/file10.jpg" alt="Course Image" class="course-image">
+                        <div class="course-icon">
+                            <img src="image/Procreate-icon 7.png" alt="Course Icon">
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <div class="course-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="far fa-star empty-star-icon"></i>
+                                <i class="far fa-star empty-star-icon"></i>
+                                <i class="far fa-star empty-star-icon"></i>
+                            </div>
+                            <h3 class="course-title">Keeping it Simple. Letting Story Do the Work For You.</h3>
+                            <div class="course-user">
+                                <img src="image/1840f2f4f9f0305edd6a0f2aacfa12d7.jpg" alt="User Avatar" class="user-avatar">
+                                <span class="user-name">Dom Lay</span>
+                            </div>
+                        </div>
+                        <div class="course-price">USD $1.00+</div>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+
+
+   
+<section class="blogs-section">
     <div class="section-header">
-        <h2 class="section-title">Courses</h2>
+        <h2 class="section-title">Blogs</h2>
         <a href="#" class="section-more">More →</a>
     </div>
-    <div class="courses-gallery">
-        <a href="course1.html" target="_blank" class="gallery-item">
-            <div class="course-image" style="background-image: url('image/angi-pauly-llobet-68f05213-91d2-4ba3-8e00-78affcb606ac 1.png');"></div>
-            <div class="course-info">
-                <div class="course-rating">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+    <div class="blogs-container">
+        
+        <a href="blog1.html" class="blog-link" target="_blank">
+            <div class="blog-item">
+                <div class="blog-image-wrapper">
+                    <img src="image/Screenshot 2025-01-21 123916.png" alt="Blog Image" class="blog-image">
                 </div>
-                <h3 class="course-title">Course Title 1</h3>
-                <div class="course-user">
-                    <img src="image/user1-profile.jpg" alt="User 1" class="user-avatar">
-                    <span class="user-name">User 1</span>
-                </div>
-            </div>
-        </a>
-        <!-- تکرار برای دیگر دوره‌ها -->
-        <a href="course2.html" target="_blank" class="gallery-item">
-            <div class="course-image" style="background-image: url('image/angi-pauly-llobet-68f05213-91d2-4ba3-8e00-78affcb606ac 2.png');"></div>
-            <div class="course-info">
-                <div class="course-rating">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-                <h3 class="course-title">Course Title 2</h3>
-                <div class="course-user">
-                    <img src="image/user2-profile.jpg" alt="User 2" class="user-avatar">
-                    <span class="user-name">User 2</span>
+                <div class="blog-content">
+                    <div class="blog-info">
+                        <h3 class="blog-title">3D Hard Surface Design and Modelling Mentorship</h3>
+                        <div class="blog-user">
+                            <img src="image/41d88aab32d29a2e492d4be9f65e9691.jpg" alt="User Avatar" class="user-avatar">
+                            <span class="user-name">Rene Mitchell - Lambert</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </a>
-        <!-- تکرار بیشتر در صورت نیاز -->
+
+        
+        <a href="blog2.html" class="blog-link" target="_blank">
+            <div class="blog-item">
+                <div class="blog-image-wrapper">
+                    <img src="image/Screenshot 2025-01-21 123922.png" alt="Blog Image" class="blog-image">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-info">
+                        <h3 class="blog-title">UE5 Drivable Atlet Military Car by Evolve Studio</h3>
+                        <div class="blog-user">
+                            <img src="image/d00e75a088fe34ab717b95d639a5191b.jpg" alt="User Avatar" class="user-avatar">
+                            <span class="user-name">Konstantin Gerhald3D</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        
+        <a href="blog3.html" class="blog-link" target="_blank">
+            <div class="blog-item">
+                <div class="blog-image-wrapper">
+                    <img src="image/Screenshot 2025-01-21 130359.png" alt="Blog Image" class="blog-image">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-info">
+                        <h3 class="blog-title">Jinx hooded WIP thread- 3D Realtime Stylized - Arcane season 2</h3>
+                        <div class="blog-user">
+                            <img src="image/32e1afa40a7f402768d925c2cf3a6a04.jpg" alt="User Avatar" class="user-avatar">
+                            <span class="user-name">Valerio-Korax-Carbone</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="blog3.html" class="blog-link" target="_blank">
+            <div class="blog-item">
+                <div class="blog-image-wrapper">
+                    <img src="image/Screenshot 2025-01-21 130651.png" alt="Blog Image" class="blog-image">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-info">
+                        <h3 class="blog-title">Arcane Challenge - Artwork Review and Winners Announce</h3>
+                        <div class="blog-user">
+                            <img src="image/60c82a64df0424a98f0f0848c38c9407.jpg" alt="User Avatar" class="user-avatar">
+                            <span class="user-name">ZUGZUG Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
     </div>
 </section>
 
-
-    <!-- بخش وبلاگ -->
-    <section class="artworks-section">
-        <div class="section-header">
-            <h2 class="section-title">Blog</h2>
-            <a href="#" class="section-more">More →</a>
-        </div>
-        <div class="gallery">
-            <div class="gallery-item" style="background-image: url('path-to-image1.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('path-to-image2.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('path-to-image3.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('path-to-image4.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('path-to-image5.jpg');"></div>
-            <div class="gallery-item" style="background-image: url('path-to-image6.jpg');"></div>
-        </div>
-    </section>
     <footer>
         <div class="footer-container">
             
@@ -199,49 +372,49 @@
         </div>
             <div class="footer-container">
                 <div class="footer-left">
-                    <!-- ستون‌های سمت چپ -->
+                    
                 </div>
                 <div class="footer-right">
-                    <!-- ستون‌های سمت راست -->
+                    
                 </div>
                     <div class="footer-container">
                         <div class="footer-left">
-                            <!-- ستون‌های سمت چپ -->
+                            
                         </div>
                         <div class="footer-right">
-                            <!-- ستون‌های سمت راست -->
+                            
                         </div>
                     </div>
                     <footer>
                         <div class="footer-container">
                             <div class="footer-left">
-                                <!-- ستون‌های سمت چپ -->
+                                
                             </div>
                             <div class="footer-right">
-                                <!-- ستون‌های سمت راست -->
+                                
                             </div>
                         </div>
-                        <!-- بخش آیکن‌های اجتماعی -->
+                        
                         <div class="footer-social-icons">
                             <h3 class="social-title">Connect</h3>
                             <div class="social-icons">
                                 <a href="https://twitter.com" target="_blank">
-                                    <img src="image/Twitter.png" alt="Twitter">
+                                    <img src="image/Twitter.png"  loading="lazy" alt="Twitter">
                                 </a>
                                 <a href="https://pinterest.com" target="_blank">
-                                    <img src="image/Pinterest.png" alt="Pinterest">
+                                    <img src="image/Pinterest.png"  loading="lazy" alt="Pinterest">
                                 </a>
                                 <a href="https://youtube.com" target="_blank">
-                                    <img src="image/YouTube.png" alt="YouTube">
+                                    <img src="image/YouTube.png"  loading="lazy" alt="YouTube">
                                 </a>
                                 <a href="https://facebook.com" target="_blank">
-                                    <img src="image/Facebook.png" alt="Facebook">
+                                    <img src="image/Facebook.png"  loading="lazy" alt="Facebook">
                                 </a>
                                 <a href="https://linkedin.com" target="_blank">
-                                    <img src="image/LinkedIn.png" alt="LinkedIn">
+                                    <img src="image/LinkedIn.png"  loading="lazy" alt="LinkedIn">
                                 </a>
                                 <a href="https://instagram.com" target="_blank">
-                                    <img src="image/Instagram.png" alt="Instagram">
+                                    <img src="image/Instagram.png"  loading="lazy" alt="Instagram">
                                 </a>
                             </div>
                         </div>
@@ -252,7 +425,7 @@
             <p>© ARTA 2025 &nbsp; | &nbsp; <a href="#">Terms of use</a> &nbsp; | &nbsp; <a href="#">Privacy policy</a> &nbsp; | &nbsp; <a href="#">Cookies policy</a></p>
         </div>        
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
 
